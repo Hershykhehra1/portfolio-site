@@ -1,13 +1,61 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/*Raleway*/
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+/*Great Vibes*/
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Raleway", sans-serif;
+  }
+
+  body {
+    overflow-x: hidden;
+    /* Prevent sideways scrolling */
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Ensure no sideways scrolling */
+  .container,
+  .max-w-screen-lg,
+  .h-screen,
+  .px-4,
+  .w-full {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 640px) {
+    .max-w-screen-lg {
+      width: 100%;
+    }
+
+    .h-screen {
+      height: auto;
+      /* Adjust for mobile */
+    }
+
+    .px-4 {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .w-full {
+      width: 100%;
+    }
+  }
 }
