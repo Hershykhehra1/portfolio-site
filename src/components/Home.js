@@ -7,9 +7,9 @@ import SocialLinks from './SocialLinks';
 const Home = () => {
 
     return (
-        <div name="home" className="w-full bg-gradient-to-b from-black via-black to-gray-800" >
+        <div name="home" className="w-full bg-gradient-to-b from-black via-black to-gray-800 pt-24">
             <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
-                <div className="flex justify-center mb-8 md:mb-0 md:w-1/2 md:order-2 mt-48 md:mt-0">
+                <div className="flex justify-center mb-8 md:mb-0 md:w-1/2 md:order-2 mt-8 md:mt-0">
                     <img src={HeroImage} alt="my profile" className="rounded-xl w-3/4 sm:w-4/5 md:w-4/5" />
                 </div>
 

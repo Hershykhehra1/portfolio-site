@@ -34,6 +34,7 @@
   .max-w-screen-lg {
     max-width: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
   }
 
   @media (max-width: 640px) {
