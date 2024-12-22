@@ -4,7 +4,6 @@ import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 
 const SocialIcons = () => {
-
     const links = [
         {
             id: 1,
@@ -14,7 +13,7 @@ const SocialIcons = () => {
                 </>
             ),
             href: 'https://www.linkedin.com/in/harshaunkhehra/',
-            style: 'rounded-tr-md'
+            style: 'rounded-tr-md',
         },
         {
             id: 2,
@@ -32,7 +31,7 @@ const SocialIcons = () => {
                     Email <HiOutlineMail size={30} />
                 </>
             ),
-            href: 'mailto: Harshaunkhehra@yahoo.com',
+            href: 'mailto:Harshaunkhehra@yahoo.com',
         },
         {
             id: 4,
@@ -41,30 +40,38 @@ const SocialIcons = () => {
                     Resume <BsFillPersonLinesFill size={30} />
                 </>
             ),
-            href: '/Harshaun_Khehra_Resume.pdf',
-            style: 'rounded-br-md',
+            href: "/Harshaun_Khehra_Resume.pdf",
+            style: "rounded-br-md",
             download: true,
-        }
-    ]
-
+        },
+    ];
 
     return (
         <div className="hidden lg:flex flex-col top-[35%] left-0 fixed">
             <ul>
-
                 {links.map(({ id, child, href, style, download }) => (
-
-                    // eslint-disable-next-line no-useless-concat
-                    <li key={id} className={"flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500" + " " + style}>
-                        <a href={href} className="flex justify-between items-center w-full text-white" download={download} target='_blank' rel="noreferrer">
+                    <li
+                        key={id}
+                        className={
+                            "flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500" +
+                            " " +
+                            style
+                        }
+                    >
+                        <a
+                            href={href}
+                            className="flex justify-between items-center w-full text-white"
+                            download={download}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
                             {child}
                         </a>
                     </li>
-
                 ))}
             </ul>
         </div>
-    )
-}
+    );
+};
 
-export default SocialIcons
+export default SocialIcons;

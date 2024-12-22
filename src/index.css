@@ -31,10 +31,7 @@
 
   /* Ensure no sideways scrolling */
   .container,
-  .max-w-screen-lg,
-  .h-screen,
-  .px-4,
-  .w-full {
+  .max-w-screen-lg {
     max-width: 100%;
     overflow-x: hidden;
   }
@@ -58,4 +55,56 @@
       width: 100%;
     }
   }
+
+  /* Debugging styles for SocialIcons */
+  .social-icons-container {
+    position: fixed;
+    top: 35%;
+    left: 0;
+    z-index: 50;
+    background-color: transparent;
+    /* Ensure it doesn't block other elements */
+  }
+
+  /* Ensure visibility */
+  .social-icons-container ul {
+    overflow: visible;
+  }
+
+  .social-icons-container li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 160px;
+    /* Adjust width for readability */
+    height: 56px;
+    /* Standard height for items */
+    padding: 8px;
+    background-color: #4a5568;
+    /* Tailwind's gray-700 */
+    color: #ffffff;
+    /* Text color */
+    margin-bottom: 8px;
+    /* Space between items */
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    /* Smooth hover effects */
+  }
+
+  /* Hover effect for animation */
+  .social-icons-container li:hover {
+    transform: translateX(20px);
+    border-radius: 16px;
+  }
+
+  /* Text and icon alignment */
+  .social-icons-container a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+  }
+
 }

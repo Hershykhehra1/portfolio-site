@@ -12,7 +12,7 @@ const Portfolio = () => {
             id: 1,
             src: MovieRater,
             title: "Full Stack Movie Rater Website",
-            description: "A full-stack movie rater webiste which allows users to log in, post books, view a gallery, add comments and ratings, mark favorites, and search for books.",
+            description: "A full-stack movie rater webiste which allows users to log in, view featured movies, view movies by genre, search for any movie, add comments, add ratings, and mark favorites.",
             technologies: ["Next.js", "React.js", "Javascript", "HTML", "Tailwind CSS"],
             link: "https://github.com/Jdhwang98/movie-rater"
         },
