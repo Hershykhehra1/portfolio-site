@@ -8,9 +8,10 @@ const NavBar = () => {
     const links = [
         { id: 1, link: 'home' },
         { id: 2, link: 'about' },
-        { id: 3, link: 'skills' },
-        { id: 4, link: 'portfolio', offset: -80 },
-        { id: 5, link: 'contact' },
+        { id: 3, link: 'experience' },
+        { id: 4, link: 'skills' },
+        { id: 5, link: 'portfolio', offset: -80 },
+        { id: 6, link: 'contact' },
     ];
 
     return (
@@ -24,13 +25,13 @@ const NavBar = () => {
                 {links.map(({ id, link, offset }) => (
                     <li
                         key={id}
-                        className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200 relative group"
+                        className="px-4 cursor-pointer capitalize font-medium text-sky-600 hover:scale-105 duration-200 relative group"
                     >
                         <Link to={link} smooth duration={500} offset={offset || 0}>
                             {link}
                         </Link>
                         {/* Underline highlight effect */}
-                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gray-500 transition-all duration-200 group-hover:w-full"></span>
+                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-700 transition-all duration-200 group-hover:w-full"></span>
                     </li>
                 ))}
             </ul>
