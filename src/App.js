@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import Portfolio from "./components/Portfolio";
 import Skills from "./components/Skills";
 import Footer from "./components/Footer";
+import Experience from "./components/Experience";
 
 function App() {
   useEffect(() => {
@@ -17,6 +18,7 @@ function App() {
       <NavBar />
       <Home />
       <About />
+      <Experience />
       <Skills />
       <Portfolio />
       <Contact />
