@@ -16,7 +16,7 @@ const Home = () => {
                 <div className="flex flex-col justify-center h-full md:w-1/2 md:order-1">
                     <h2 className="text-4xl sm:text-7xl font-bold text-white">Harshaun Khehra</h2>
                     <p className="text-gray-500 py-4 max-w-md">
-                        Senior Computer Science Student at Cal State LA. Let's Chat!
+                        First year Masters Student at UC Irvine. Let's Chat!
                     </p>
                     <div>
                         <Link

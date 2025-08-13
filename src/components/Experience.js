@@ -53,17 +53,16 @@ const Experience = () => {
             initial={{ y: 100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className={`mb-8 rounded-lg p-6 bg-gray-900 shadow-lg ${experience.style} flex items-center gap-8`}
-          >
+            className={`mb-8 rounded-lg p-6 bg-gray-900 shadow-lg ${experience.style} flex items-center gap-8`}>
             <img
               src={experience.logo}
               alt={`${experience.company || 'Company'} logo`}
               className="w-20 h-20 object-contain"
             />
             <div>
-              <h3 className="text-2xl font-bold">{experience.title}</h3>
-              <p className="text-lg">{experience.company || experience.location}</p>
-              <p className="text-sm text-gray-400">
+              <h3 className="text-2xl font-bold text-sky-600">{experience.title}</h3>
+              <p className="text-lg text-gray-400">{experience.company} - {experience.location}</p>
+              <p className="text-sm text-sky-400">
                 {experience.startDate} - {experience.endDate}
               </p>
               <p className="mt-2">{experience.description}</p>

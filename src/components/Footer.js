@@ -14,7 +14,7 @@ const Footer = () => {
                     </p>
 
                     <p className="font-playfair text-md bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-blue-500 mt-4 md:mt-0 md:ml-4">
-                        ©2024 Khehra. All Rights Reserved.
+                        ©2025 Khehra. All Rights Reserved.
                     </p>
                 </div>
             </div>
