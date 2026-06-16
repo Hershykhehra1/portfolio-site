@@ -13,7 +13,7 @@ function App() {
     document.title = "Harshaun Khehra's Portfolio";
   }, []);
   return (
-    <div>
+    <div className="bg-black min-h-screen">
 
       <NavBar />
       <Home />
