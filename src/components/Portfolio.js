@@ -2,9 +2,9 @@ import React from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import BookStore from '../assets/portfolio/BES.gif';
 import recipeWebsite from '../assets/portfolio/RecipeWebsite.png';
-import portfolio from '../assets/portfolio/Portfolio.png';
-import spaceInvaders from '../assets/portfolio/spaceInvaders.gif';
 import MovieRater from '../assets/portfolio/MovieRater.gif';
+import SurveyOpsPlus from '../assets/portfolio/SurveyOpsPlus.jpg';
+import BillingSystem from '../assets/portfolio/billing.gif';
 import { sectionTitle, titleUnderline, viewport } from '../utils/motion';
 
 const Portfolio = () => {
@@ -12,6 +12,22 @@ const Portfolio = () => {
     const projects = [
         {
             id: 1,
+            src: SurveyOpsPlus,
+            title: "SurveyOps+ LLM Assisted Insurance and Survey Automation",
+            description: "SurveyOpsPlus is a mobile-first AI application that automates the marine cargo damage survey workflow,  from field image capture to compliance-ready report generation. Marine surveyors today operate on a fully manual pipeline: photographing container damage on-site, transferring images via cable to a laptop, hand-tagging each photo, and writing detailed inspection reports from memory hours after the inspection. This process is slow, error-prone, inconsistent across surveyors, and produces no standardized audit trail.",
+            technologies: ["React Native", "Python", "LangGraph", "Google Gemini", "Docker", "PostgreSQL", "Tailwind CSS"],
+            link: "https://github.com/kurian-thomas/survey-ops-plus"
+        },
+        {
+            id: 2,
+            src: BillingSystem,
+            title: "Full Stack Billing System",
+            description: "This is a billing system application that is equiped with role based authentication (admin, employees, and customers) and simulates a real word store. Users are able to manage credentials for accounts registered, add products into the store, and customer accounts are allowed to putchase anything using paypal payment processing.",
+            technologies: ["Java", "React", "SpringBoot", "AWS", "MySQL", "PayPal", "Role Based Authentication"],
+            link: "https://github.com/Hershykhehra1/Space_Invaders_Game"
+        },
+        {
+            id: 3,
             src: MovieRater,
             title: "Full Stack Movie Rater Website",
             description: "A full-stack movie rater webiste which allows users to log in, view featured movies, view movies by genre, search for any movie, add comments, add ratings, and mark favorites.",
@@ -19,15 +35,7 @@ const Portfolio = () => {
             link: "https://github.com/Jdhwang98/movie-rater"
         },
         {
-            id: 2,
-            src: recipeWebsite,
-            title: "Full Stack Recipe Book Website",
-            description: "A full-stack recipe book website with user authentication, enabling users to add, edit, and delete their own recipes. Data is securely stored in a MySQL database, with permissions to prevent unauthorized changes to others' recipes.",
-            technologies: ["Java", "SpringBoot", "Javascript", "jQuery", "HTML", "CSS"],
-            link: "https://github.com/Hershykhehra1/Recipe_Website"
-        },
-        {
-            id: 3,
+            id: 4,
             src: BookStore,
             title: "Full Stack Book Store Website",
             description: "A full-stack book store website that lets users to log in, post books, view a gallery, add comments and ratings, mark favorites, and search for books.",
@@ -35,21 +43,13 @@ const Portfolio = () => {
             link: "https://github.com/Hershykhehra1/Book-Exchange-System"
         },
         {
-            id: 4,
-            src: portfolio,
-            title: "Portfolio Website",
-            description: "This portfolio website is designed to highlight and display my computer science skills.",
-            technologies: ["React.js", "Javascript", "HTML", "Tailwind CSS"],
-            link: "https://github.com/Hershykhehra1/portfolio-website"
-        },
-        {
             id: 5,
-            src: spaceInvaders,
-            title: "Space Invader Game",
-            description: "A classic Space Invaders game built with Python and Pygame, featuring object-oriented design, smooth animations, and interactive gameplay. Demonstrates skills in game development, collision detection, and responsive controls.",
-            technologies: ["Python", "Pygame"],
-            link: "https://github.com/Hershykhehra1/Space_Invaders_Game"
-        }
+            src: recipeWebsite,
+            title: "Full Stack Recipe Book Website",
+            description: "A full-stack recipe book website with user authentication, enabling users to add, edit, and delete their own recipes. Data is securely stored in a MySQL database, with permissions to prevent unauthorized changes to others' recipes.",
+            technologies: ["Java", "SpringBoot", "Javascript", "jQuery", "HTML", "CSS"],
+            link: "https://github.com/Hershykhehra1/Recipe_Website"
+        },
     ];
 
     const containerVariants = {
@@ -175,7 +175,7 @@ const Portfolio = () => {
                                     {title}
                                 </motion.a>
                                 <motion.p
-                                    className="mb-3 text-gray-300"
+                                    className="mb-3 text-gray-300 text-xs"
                                     initial={{ opacity: 0 }}
                                     whileInView={{ opacity: 1 }}
                                     transition={{ delay: 0.2, duration: 0.5 }}
