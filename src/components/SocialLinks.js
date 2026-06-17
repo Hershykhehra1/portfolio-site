@@ -1,40 +1,62 @@
-import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
-import { BsFillPersonLinesFill } from "react-icons/bs";
+import React from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
+import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { staggerContainer, staggerItem, springSnappy } from '../utils/motion';
 
-const SocialLinks = () => {
+const SocialLinks = ({ centered = false }) => {
+    const reduceMotion = useReducedMotion();
+
     const links = [
         {
             id: 1,
             child: <FaLinkedin size={25} />,
-            href: "https://www.linkedin.com/in/harshaunkhehra/",
+            href: 'https://www.linkedin.com/in/harshaunkhehra/',
         },
         {
             id: 2,
             child: <FaGithub size={25} />,
-            href: "https://github.com/Hershykhehra1",
+            href: 'https://github.com/Hershykhehra1',
         },
         {
             id: 3,
             child: <HiOutlineMail size={25} />,
-            href: "mailto:Harshaunkhehra@yahoo.com",
+            href: 'mailto:Harshaunkhehra@yahoo.com',
         },
         {
             id: 4,
             child: <BsFillPersonLinesFill size={25} />,
-            href: "/Harshaun_Khehra_Resume.pdf",
+            href: '/Harshaun_Khehra_Resume.pdf',
             download: true,
         },
     ];
 
     return (
-        <div className="flex justify-start items-center space-x-6 mt-10 ml-30">
-            <ul className="flex space-x-6">
+        <div className={`flex items-center space-x-6 mt-10 ${centered ? 'justify-center' : 'justify-start ml-30'}`}>
+            <motion.ul
+                className="flex space-x-6"
+                variants={staggerContainer(0.08, 0.2)}
+                initial={reduceMotion ? false : 'hidden'}
+                animate="visible"
+            >
                 {links.map(({ id, child, href, download }) => (
-                    <li
+                    <motion.li
                         key={id}
-                        className="flex items-center justify-center w-14 h-14 text-white hover:bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg transition duration-300"
+                        variants={staggerItem}
+                        className="flex items-center justify-center w-14 h-14 text-white rounded-lg border border-white/10 bg-white/5"
+                        whileHover={
+                            reduceMotion
+                                ? {}
+                                : {
+                                    scale: 1.15,
+                                    y: -4,
+                                    background: 'linear-gradient(to right, rgb(6, 182, 212), rgb(59, 130, 246))',
+                                    boxShadow: '0 10px 30px rgba(6, 182, 212, 0.3)',
+                                }
+                        }
+                        whileTap={reduceMotion ? {} : { scale: 0.92 }}
+                        transition={springSnappy}
                     >
                         <a
                             href={href}
@@ -45,9 +67,9 @@ const SocialLinks = () => {
                         >
                             {child}
                         </a>
-                    </li>
+                    </motion.li>
                 ))}
-            </ul>
+            </motion.ul>
         </div>
     );
 };
